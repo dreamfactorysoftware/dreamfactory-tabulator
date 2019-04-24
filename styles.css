@@ -1,0 +1,10 @@
+body {
+    background-color: #D9D9F2;
+}
+ 
+.topic {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

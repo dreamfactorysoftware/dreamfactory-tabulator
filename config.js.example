@@ -1,4 +1,0 @@
-var config = {
-  "apiKey": "123d7e2f2fe1288869677ec89fac385f3913f62848daef760ae828c971cbe4b6",
-  "url": "https://demo.dreamfactory.com/api/v2/tabulator",
-}
