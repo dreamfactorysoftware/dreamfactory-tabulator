@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>DreamFactory Tabulator Example</title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
+  integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI="
+  crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/tabulator-tables@4.2.5/dist/css/tabulator.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.2.5/css/bootstrap/tabulator_bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.2.5/dist/js/tabulator.min.js"></script>
+    <script type="text/javascript" src="/config.js"></script>
+  </head>
+  <body>
+  
+    <div id="example-table"></div>
+
+    <button id="ajax-trigger" type="button">Load Data</button>
+
+    <script>
+
+        var table = new Tabulator("#example-table", {
+            layout:"fitData",
+            height:"calc(100% - 250px)",
+            pagination:"local",
+            paginationSize:20,
+            paginationSizeSelector:[20, 40, 60, 80],
+            placeholder:"No Data Set",
+            columns:[
+                {title:"Employee Number", field:"emp_no", sorter:"string", width:200},
+                {title:"First Name", field:"first_name", sorter:"string", width:200},
+                {title:"Last Name", field:"first_name", sorter:"string", width:200},
+                {title:"Birth Date", field:"birth_date", sorter:"string", width:200},
+                {title:"Hire Date", field:"hire_date", sorter:"string", width:200},
+            ],
+        });
+
+        //trigger AJAX load on "Load Data via AJAX" button click
+        $("#ajax-trigger").click(function(){
+
+            var ajaxConfig = {
+                dataType: 'json',
+                headers: {
+                    "X-DreamFactory-Api-Key": config.apiKey 
+                },
+            };
+
+            table.setData(config.url, {}, ajaxConfig);
+        });
+
+    </script>
+
+  </body>
+</html>
