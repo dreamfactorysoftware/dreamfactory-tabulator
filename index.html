@@ -124,12 +124,14 @@
         var table = new Tabulator("#example-table", {
             layout:"fitData",
             height:"500px",
+            movableRows:true,
             layout:"fitColumns",
             pagination:"local",
             paginationSize:20,
             paginationSizeSelector:[20, 40, 60, 80],
             placeholder:"No Data Set",
             columns:[
+                {rowHandle:true, formatter:"handle", headerSort:false, frozen:true, width:30, minWidth:30},
                 {title:"Employee Number", field:"emp_no", sorter:"number", headerFilter:"number"},
                 {title:"First Name", field:"first_name", sorter:"string", headerFilter:"input"},
                 {title:"Last Name", field:"last_name", sorter:"string", headerFilter:"input"},
