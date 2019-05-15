@@ -2,13 +2,12 @@
 
 ## Installation
 
-1. Import the MySQL Employees sample database into a MySQL database (https://dev.mysql.com/doc/employee/en/)
-
+1. Import the [MySQL Employees](https://dev.mysql.com/doc/employee/en/) sample database into a MySQL database 
 2. Generate an API for this database
 
 ![alt text](./createservice.png)
 
-3. Create a role and API key capable of talking to this database.
+3. Create a [role and API key](http://guide.dreamfactory.com/docs/chapter03.html#creating-a-role) capable of talking to this database.
 
 ![alt text](./createrole.png)
 ![alt text](./createapikey.png)
