@@ -52,7 +52,7 @@ body {
 }
 
 .title {
-    max-width: 320px;
+    max-width: 600px;
     margin-right: 20px;
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 .hint {
-    max-width: 400px;
+    max-width: 600px;
     padding: 15px 20px;
     display: flex;
     align-items: flex-start;
