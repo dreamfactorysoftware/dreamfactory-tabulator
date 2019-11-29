@@ -1,13 +1,301 @@
 body {
-    background-color: rgb(229, 231, 235);
+    background-color: rgba(236, 239, 242, 0.4);
     font-family: Lato,sans-serif;
 }
- 
+
+.main-container {
+    padding: 0 130px;
+    width: auto;
+    height: auto;
+}
+
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.logo-link {
+    width: 180px;
+    margin: 20px 30px;
+    height: 28px;
+}
+
+.navbar-items-container {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-item > a {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1d3d56;
+}
+
+
 .topic {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px 0;
+}
+
+.title {
+    max-width: 320px;
+    margin-right: 20px;
+}
+
+.title > h1 {
+    font-size: 26px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    color: #2e2ea3;
+    margin: 0;
+}
+
+.hint {
+    max-width: 400px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 17px;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(107deg, #5a5ad0 -48%, #2e2ea3 99%);
+    position: relative;
+}
+
+.hint::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #2e2ea3;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 95%;
+    right: 10%;
+}
+
+.hint > p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.hint > i {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 5px 5px 0 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        padding: 0 70px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .main-container {
+        padding: 0;
+    }
+
+    .topic {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        margin-bottom: 20px;
+    }
+
+    .title > h1 {
+        text-align: center;
+    }
+
+    .hint::after {
+        content: '';
+        right: 50%;
+        background-color: #3c3db3;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-items-container {
+        margin-bottom: 10px;
+    }
+}
+
+.tabulator {
+    border-bottom: none;
+    background-color: transparent;
+    margin-bottom: 80px;
+}
+
+.tabulator .tabulator-header {
+    border: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.tabulator .tabulator-header, .tabulator .tabulator-header .tabulator-col  {
+    background-color: #1d3d56;
+}
+
+.tabulator .tabulator-header .tabulator-col {
+    border: none;
+}
+
+.tabulator .tabulator-header .tabulator-frozen.tabulator-frozen-left {
+    border: none;
+}
+
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover {
+    background-color: #1d3d56;
+}
+
+.tabulator-header .tabulator-col.tabulator-sortable[aria-sort=none] .tabulator-col-content .tabulator-arrow{
+    border-bottom-color: #ffffff !important;
+}
+
+.tabulator-col-title {
+    padding-bottom: 10px;
+}
+
+.tabulator-header-filter > input {
+    border-radius: 4px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.tabulator-header-filter > input::placeholder {
+    color: #2b5172;
+}
+
+.tabulator-placeholder > span {
+    color: #1d3d56!important;
+}
+
+.tabulator .tabulator-tableHolder .tabulator-table {
+    background-color: transparent;
+}
+
+.tabulator-row.tabulator-row-even, .tabulator-row.tabulator-row-odd {
+    background-color: #ffffff;
+    margin: 3px 0;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tabulator-row.tabulator-selectable:hover {
+    background-color: #eaeaea;
+}
+
+.tabulator-row .tabulator-frozen.tabulator-frozen-left {
+    border-right: none;
+    padding-left: 15px;
+}
+
+.tabulator-row .tabulator-cell {
+    padding: 10px 0;
+    border-right: none;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #1d3d56;
+}
+
+.tabulator-row .tabulator-cell.tabulator-row-handle .tabulator-row-handle-box .tabulator-row-handle-bar {
+    background: #7490a9;
+}
+
+
+.tabulator .tabulator-footer {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: left;
+    font-weight: normal;
+    margin: 40px 0 0 0;
+}
+
+.tabulator-paginator {
+    display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+}
+
+.tabulator .tabulator-footer .tabulator-paginator label {
+    justify-self: left;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.5;
+    letter-spacing: normal;
+    color: #1d3d56;
+}
+
+.tabulator .tabulator-footer .tabulator-page-size {
+    justify-self: flex-start;
+    border-radius: 13px;
+    box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border: none;
+    padding: 3px 7px;
+    margin-right: 30px;
+}
+
+.tabulator .tabulator-footer .tabulator-pages {
+    justify-self: center;
+    padding: 10px 17px;
+    border-radius: 13px;
+    box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+.tabulator .tabulator-footer .tabulator-page {
+    justify-self: center;
+    border: none;
+    padding: 0 10px;
+}
+
+.tabulator .tabulator-footer .tabulator-page:not(.disabled):hover {
+    background-color: #efefef;
+    color: #000000;
 }

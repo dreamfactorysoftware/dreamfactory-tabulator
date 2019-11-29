@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Creating Interactive Web Tables with DreamFactory and Tabulator</title>
     <script
     src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
@@ -13,36 +16,53 @@
     <script type="text/javascript" src="./config.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/865561b243.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./styles.css" />
   </head>
   <body>
-  
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #323232">
-  <a class="navbar-brand" href="#">
-  <img src="./acmelogo.png" width="40" height="30" class="d-inline-block align-top" alt="">
-  Acme Corp.
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="http://guide.dreamfactory.com/">Learn More</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.dreamfactory.com/demo/">Book a Demo</a>
-      </li>
-    </ul>
-  </div>
-</nav>
 
-    <div class="topic">
-        <h1>Creating Interactive Web Tables with DreamFactory and Tabulator</h1>
-        <p>This interactive data table was created with less than 30 lines of code using the DreamFactory API Platform and Tabulator.</p>
+  <nav class="navbar">
+    <a class="logo-link" href="https://www.dreamfactory.com/">
+      <img src="./dream-factory-logo-blue.svg" width="180" height="28" class="navabar-logo" alt="DreamFactory">
+    </a>
+
+    <div class="navbar-items-container">
+
+      <div class="navbar-item">
+        <a class="nav-link" href="http://guide.dreamfactory.com/">
+          <i class="fas fa-book"></i>
+          Learn More
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a class="nav-link" href="https://www.dreamfactory.com/demo/">
+          <i class="far fa-calendar"></i>
+          Book a Demo
+        </a>
+      </div>
     </div>
+  </nav>
 
-    <div id="example-table"></div>
+
+  <div class="main-container">
+
+      <div class="topic">
+
+        <div class="title">
+          <h1>Creating Interactive Web Tables with DreamFactory and Tabulator</h1>
+        </div>
+
+        <div class="hint">
+          <i class="fas fa-info-circle"></i>
+          <p>This interactive data table was created with less than 30 lines of code using the DreamFactory API Platform and Tabulator.</p>
+        </div>
+      </div>
+
+
+      <div id="example-table"></div>
+    </div>
 
     <script>
         //custom max min header filter
@@ -132,7 +152,7 @@
             paginationSizeSelector:[20, 40, 60, 80],
             placeholder:"No Data Set",
             columns:[
-                {rowHandle:true, formatter:"handle", headerSort:false, frozen:true, width:30, minWidth:30},
+                {rowHandle:true, formatter:"handle", headerSort:false, frozen:true, width:40, minWidth:40},
                 {title:"Employee Number", field:"emp_no", sorter:"number", headerFilter:"number"},
                 {title:"First Name", field:"first_name", sorter:"string", headerFilter:"input"},
                 {title:"Last Name", field:"last_name", sorter:"string", headerFilter:"input"},
