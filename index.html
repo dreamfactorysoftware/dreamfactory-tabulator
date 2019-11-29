@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Creating Interactive Web Tables with DreamFactory and Tabulator</title>
     <script
     src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
@@ -13,7 +16,7 @@
     <script type="text/javascript" src="./config.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <!--FONT AWESOME-->
+    <!--FONT AWESOME-->
     <script src="https://kit.fontawesome.com/865561b243.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./styles.css" />
   </head>
@@ -44,7 +47,7 @@
 
 
   <div class="main-container">
-    
+
       <div class="topic">
 
         <div class="title">
@@ -52,6 +55,7 @@
         </div>
 
         <div class="hint">
+          <i class="fas fa-info-circle"></i>
           <p>This interactive data table was created with less than 30 lines of code using the DreamFactory API Platform and Tabulator.</p>
         </div>
       </div>
@@ -148,7 +152,7 @@
             paginationSizeSelector:[20, 40, 60, 80],
             placeholder:"No Data Set",
             columns:[
-                {rowHandle:true, formatter:"handle", headerSort:false, frozen:true, width:30, minWidth:30},
+                {rowHandle:true, formatter:"handle", headerSort:false, frozen:true, width:40, minWidth:40},
                 {title:"Employee Number", field:"emp_no", sorter:"number", headerFilter:"number"},
                 {title:"First Name", field:"first_name", sorter:"string", headerFilter:"input"},
                 {title:"Last Name", field:"last_name", sorter:"string", headerFilter:"input"},
