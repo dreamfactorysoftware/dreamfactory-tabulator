@@ -22,4 +22,4 @@
 
 ## Troubleshooting
 
-If any issues arise creating the API, Key, or Role please reference our new and [improved guide](http://guide.dreamfactory.com/docs/#about-this-guide). 
+If any issues arise creating the API, Key, or Role please reference our new and [improved guide](https://guide.dreamfactory.com/docs/#about-this-guide).
